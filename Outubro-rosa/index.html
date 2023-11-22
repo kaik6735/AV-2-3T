@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Campanha de Prevenção</title>
+</head>
+<header>
+    <section class="titulo">
+        <div class="cabecalho">
+            <h1>Campanha de Prevenção</h1>
+        </div>
+    </section>
+</header>
+<body style="background-image:url(img/background.png);">
+    <script>
+    function toggleMenu() {
+        var menu = document.querySelector('.menu');
+        var menuIcon = document.querySelector('.menu-icon');
+    
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+            menuIcon.classList.remove('open');
+        } else {
+            menu.style.display = 'block';
+            menuIcon.classList.add('open');
+        }
+    }
+</script>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <div class="menu menu-hidden">
+        <ul>
+            <li>
+                <a href="#idiomas" onclick="toggleSubOptions(event)">Idiomas</a>
+                <ul class="sub-options idiomas">
+                    <button onclick="translateToEnglish()">Inglês</button>
+                    <button onclick="resetTranslations()">Português</button>
+                    <button onclick="translateToSpanish()">Espanhol</button>
+                    <button onclick="goBackFromSubmenu()">Voltar</button>
+
+                   
+                </ul>
+            </li>
+            <li>
+                <a href="#acessibilidade" onclick="toggleSubOptions(event)">Acessibilidade</a>
+                <ul class="sub-options acessibilidade">
+                    <button id="aumentarFonte" onclick="aumentarFonte()">Aumentar Fonte</button>
+                    <button id="resetarFonte" onclick="resetarFonte()">Resetar Fonte</button>
+                    <button onclick="readSiteContent()">Assistencia de áudio</button>
+                    <button onclick="goBackFromSubmenu()">Voltar</button>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="icon">
+        <div class="icon-Rosa">
+            <img src="img/rosa.png" alt="simbolo">
+        </div>
+        <div class="icon-Azul">
+            <img src="img/azul.png" alt="simbolo">
+        </div>
+    </div>
+
+    
+    
+
+    
+    <div class="conteudo">
+        <h1>Outubro Rosa o que é?</h1>
+        <p>Outubro Rosa é uma campanha de conscientização que tem como objetivo principal alertar as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do câncer de mama e mais recentemente sobre o câncer de colo do útero.</p>
+        <p>ESTIMATIVAS DE NOVOS CASOS DE CÂNCER DE MAMA (2020 - INCA). É O CÂNCER MAIS COMUM ENTRE AS MULHERES.</p>
+        <img src="img/graficom.png" alt="grafo">
+    </div>
+
+    <div class="conteudo-azul">
+        <h1> Novembro Azul, do que se trata?</h1>
+        <p> Identificação precoce de doenças aumenta as chances de um tratamento eficaz. Por isso, alguns exames devem fazer parte da rotina dos homens. “É preciso prestar atenção no corpo e ficar atento aos sinais que ele envia. O cuidado deve ser diário.</p>
+        <img src="img/graficoh.jpg" alt="grafo">
+        <div class="preto">
+        <h1>Qual a importância de se realizar o tratamento precose, e ficar atento aos sinais do corpo?</h1>
+    </div>
+        <p>A identificação precoce de doenças aumenta as chances de um tratamento eficaz. Por isso, alguns exames devem fazer parte da rotina dos homens. “É preciso prestar atenção no corpo e ficar atento aos sinais que ele envia. O cuidado deve ser diário.</p>
+    </div>
+       
+</body>
+<footer class="rodape">
+    <h4>
+     <p>Endereço: Rua Bahia, 1258 Centro 86.690-000 - Colorado - Pr</p>
+     <p>Telefone:(44) 3323-1055</p>
+     <p>Email: clomonteirolobato@seed.pr.gov.br</p>
+    </h4>
+</footer>
+
+<script src="script.js"></script>
+</html>
+<body id="pageBody" style="background-image:url(img/background.png);">
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            var menuIcon = document.querySelector('.menu-icon');
+            var closeButton = document.querySelector('.close-button');
+            var pageBody = document.getElementById('pageBody');
+        
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                menuIcon.classList.remove('open');
+                closeButton.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+                menuIcon.classList.add('open');
+                closeButton.style.display = 'block';
+            }
+        }
+
+        function toggleSubOptions(event) {
+            event.preventDefault();
+            var subOptions = event.target.nextElementSibling; // Ajuste isso de acordo com a estrutura do seu HTML
+            if (subOptions.style.display === 'block') {
+                subOptions.style.display = 'none';
+            } else {
+                subOptions.style.display = 'block';
+            }
+        }
+
+        function voltarMenu() {
+            var subOptions = document.querySelectorAll('.sub-options');
+            subOptions.forEach(function (subOption) {
+                subOption.style.display = 'none';
+            });
+        }
+
+        function toggleSubOptionsAcessibilidade(event) {
+            event.preventDefault();
+            var subOptionsAcessibilidade = document.querySelector('.sub-options.acessibilidade');
+            if (subOptionsAcessibilidade.style.display === 'block') {
+                subOptionsAcessibilidade.style.display = 'none';
+            } else {
+                subOptionsAcessibilidade.style.display = 'block';
+            }
+        }
+    </script>
+
+        </script>
+        <script>
+            function translateToEnglish() {
+              // Tradução do título
+              document.querySelector('.cabecalho h1').innerHTML = 'Prevention Campaign';
+          
+              // Tradução do conteúdo
+              document.querySelector('.conteudo h1').innerHTML = 'What is Pink October?';
+              document.querySelector('.conteudo p:nth-child(2)').innerHTML = 'Pink October is an awareness campaign aimed at informing women and society about the importance of prevention and early diagnosis of breast cancer and more recently cervical cancer.';
+              // Adicione mais traduções conforme necessário...
+          
+              // Tradução do rodapé
+              document.querySelector('.rodape h4 p:nth-child(1)').innerHTML = 'Address: Bahia Street, 1258 Center 86.690-000 - Colorado - PR';
+              document.querySelector('.rodape h4 p:nth-child(2)').innerHTML = 'Phone: (44) 3323-1055';
+              document.querySelector('.rodape h4 p:nth-child(3)').innerHTML = 'Email: clomonteirolobato@seed.pr.gov.br';
+            }
+          </script>
+          <script>
+            function translateToSpanish() {
+              // Tradução do título
+              document.querySelector('.cabecalho h1').innerHTML = 'Campaña de Prevención';
+          
+              // Tradução do conteúdo
+              document.querySelector('.conteudo h1').innerHTML = '¿Qué es Octubre Rosa?';
+              document.querySelector('.conteudo p:nth-child(2)').innerHTML = 'Octubre Rosa es una campaña de concientización que tiene como objetivo principal alertar a las mujeres y a la sociedad sobre la importancia de la prevención y el diagnóstico temprano del cáncer de mama y más recientemente sobre el cáncer de cuello uterino.';
+              // Adicione mais traduções conforme necessário...
+          
+              // Tradução do rodapé
+              document.querySelector('.rodape h4 p:nth-child(1)').innerHTML = 'Dirección: Calle Bahía, 1258 Centro 86.690-000 - Colorado - PR';
+              document.querySelector('.rodape h4 p:nth-child(2)').innerHTML = 'Teléfono: (44) 3323-1055';
+              document.querySelector('.rodape h4 p:nth-child(3)').innerHTML = 'Correo electrónico: clomonteirolobato@seed.pr.gov.br';
+            }
+          </script>
+        <script>
+            function resetTranslations() {
+              // Restaurar título
+              document.querySelector('.cabecalho h1').innerHTML = 'Campanha de Prevenção';
+          
+              // Restaurar conteúdo
+              document.querySelector('.conteudo h1').innerHTML = 'Outubro Rosa o que é?';
+              document.querySelector('.conteudo p:nth-child(2)').innerHTML = 'Outubro Rosa é uma campanha de conscientização que tem como objetivo principal alertar as mulheres e a sociedade sobre a importância da prevenção e do diagnóstico precoce do câncer de mama e mais recentemente sobre o câncer de colo do útero.';
+              // Adicione mais restaurações conforme necessário...
+          
+              // Restaurar rodapé
+              document.querySelector('.rodape h4 p:nth-child(1)').innerHTML = 'Endereço: Rua Bahia, 1258 Centro 86.690-000 - Colorado - Pr';
+              document.querySelector('.rodape h4 p:nth-child(2)').innerHTML = 'Telefone:(44) 3323-1055';
+              document.querySelector('.rodape h4 p:nth-child(3)').innerHTML = 'Email: clomonteirolobato@seed.pr.gov.br';
+            }
+          </script>
+          <script>
+            function goBackFromSubmenu() {
+              // Ocultar todos os submenus
+              var subOptions = document.querySelectorAll('.sub-options');
+              subOptions.forEach(function (subOption) {
+                  subOption.style.display = 'none';
+              });
+          
+              // Se necessário, redefina outros elementos relacionados ao submenu
+          
+              // Atualizar outros elementos conforme necessário
+            }
+          </script>
+          <script>
+            function readSiteContent() {
+              // Obter todos os elementos de texto na página
+              var textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a, li');
+          
+              // Concatenar todo o texto em uma string
+              var fullText = Array.from(textElements).map(element => element.textContent).join(' ');
+          
+              // Verificar se o navegador suporta a síntese de voz
+              if ('speechSynthesis' in window) {
+                // Criar um objeto SpeechSynthesisUtterance
+                var utterance = new SpeechSynthesisUtterance(fullText);
+          
+                // Definir o idioma para português (pode precisar ser ajustado dependendo do idioma do conteúdo)
+                utterance.lang = 'pt-BR';
+          
+                // Acionar a síntese de voz
+                window.speechSynthesis.speak(utterance);
+              } else {
+                // Se a síntese de voz não for suportada, informar o usuário
+                alert('Desculpe, a síntese de voz não é suportada pelo seu navegador.');
+              }
+            }
+          </script>
+          <script>
+            function aumentarFonte() {
+    // Obter o elemento de conteúdo cuja fonte você deseja aumentar
+    var conteudo = document.querySelector('.conteudo');
+    
+    // Obter o tamanho atual da fonte e converter para número
+    var tamanhoAtual = window.getComputedStyle(conteudo, null).getPropertyValue('font-size');
+    var tamanhoAtualNum = parseFloat(tamanhoAtual);
+
+    // Aumentar o tamanho da fonte (por exemplo, 2 pixels)
+    var novoTamanho = tamanhoAtualNum + 2;
+
+    // Definir o novo tamanho da fonte
+    conteudo.style.fontSize = novoTamanho + 'px';
+}
+
+          </script>
+          <script>
+            function resetarFonte() {
+    // Obter o elemento de conteúdo cuja fonte você deseja resetar
+    var conteudo = document.querySelector('.conteudo');
+    
+    // Restaurar o tamanho original da fonte
+    conteudo.style.fontSize = ''; // Isso remove a propriedade inline, voltando ao valor do estilo definido no CSS
+}
+
+          </script>
+  
+ 
+    
+          
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+     
+
+

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Irish+Grover'); 
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
+h1{ font-family: 'Irish Grover', sans-serif; text-align: center;
+color: black; }
+
+.cabecalho{
+    display:flex ;
+    text-align: center;
+}
+.titulo{
+    background: #705692;
+}
+.conteudo{
+    text-align: center;
+    font-size: x-large ;
+    color: #BA35BD;
+    font-family: 'Irish Grover', sans-serif;
+    padding-inline: 20%;
+    padding-bottom: 2%;
+}
+.simbolo{
+    text-align: center;
+    padding: 30%;
+}
+.cabecalho h1{
+    text-align:center;
+    padding-top: 1%;
+    font-family:'ABeeZee', sans-serif ;
+}@import url('https://fonts.googleapis.com/css?family=Irish+Grover'); 
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
+h1{ font-family: 'Irish Grover', sans-serif; text-align: center;
+color: black;
+ }
+
+.cabecalho{
+    display:flex ;
+    text-align: center;
+}
+.titulo{
+    background: #705692;
+}
+.conteudo{
+    text-align: center;
+    font-size: x-large ;
+    color: #BA35BD;
+    font-family: 'Irish Grover', sans-serif;
+    padding-inline: 20%;
+    padding-bottom: 2%;
+}
+.simbolo{
+    text-align: center;
+    padding: 30%;
+}
+
+.conteudo-azul{
+    text-align: center;
+    padding-inline: 10%;
+    font-size: x-large ;
+    color: #501CE5;
+    font-family: 'Irish Grover', sans-serif;
+    padding-inline: 20%;
+    padding-bottom: 2%;
+}
+.preto{
+    color: black;
+}
+.rodape{
+    background: #705692;
+    text-align: center;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: large;
+    font-family:'ABeeZee', sans-serif ;
+}
+.icon{
+    display: flex;
+    padding-top: 3%;
+ }
+ 
+ .icon-Rosa{
+     padding-left: 350px;
+ }
+ 
+ .icon-Azul{
+     padding-left: 800px;
+ }
+.conteudo h1{
+    padding-bottom: 2.5%;
+    font-size: xx-large;
+}
+.conteudo-azul h1{
+    padding-bottom: 2.5%;
+    font-size: xx-large;
+}
+.conteudo-azul h1{
+    padding-bottom: 2.5%;
+    font-size: xx-large;
+    padding-top: 2.5% ;
+}
+
+
+
+
+
+.menu-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    background-image: url(img/conf.png);
+}
+
+.menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 19px;
+    padding-right: 6px;
+    margin-bottom: 9px;
+    opacity: 0;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu ul li {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    display: block;
+}
+
+/* Estilos para ocultar o menu quando não estiver visível */
+.menu-hidden {
+    display: none;
+}
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.menu .close-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none; /* Inicialmente, o botão de fechamento está oculto */
+}
+
+.menu .close-button:hover {
+    background-color: #555;
+}
+.menu-icon {
+    position: absolute;
+    top: 10px; /* Ajuste a distância do topo conforme necessário */
+    left: 10px; /* Ajuste a distância da esquerda conforme necessário */
+    cursor: pointer;
+    z-index: 1; }
+
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .menu-icon img {
+        width: 30px; /* Largura da imagem do botão */
+        height: auto;
+    }
+/* Estilos para o botão de menu */
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Estilos para a imagem do botão de menu */
+.menu-icon img {
+    width: 100px; /* Largura da imagem do botão */
+    height: auto; /* Altura ajustável para manter a proporção */
+}
+
+/* Estilos para o botão de menu quando está aberto */
+.menu-toggle:checked + .menu-icon .open {
+    display: none;
+}
+
+/* Estilos para o botão de menu quando está fechado */
+.menu-toggle:checked + .menu-icon .closed {
+    display: inline;
+}
+
+/* Estilos para o menu quando o botão de menu está marcado como aberto */
+.menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+}
+
+/* Estilos para ocultar o menu inicialmente */
+.menu {
+    display: none;
+    /* Outros estilos para o menu... */
+}
+.menu.open .sub-options {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transform: translate(-50%, -50%);
+}
+.sub-options {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transform: translate(-50%, -50%);
+}
+.sub-options button {
+    background-color: #705692;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
